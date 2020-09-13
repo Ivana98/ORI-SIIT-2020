@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="dd285912-ed12-4549-9fcd-64ba29edddb7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="cnn_project" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1eJDwyfj9pGFN3VJW5Op7eqMEGI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cnn_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sortImgs" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="cnn_project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/sortImgs.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.main" />
+        <item itemvalue="Python.sortImgs" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="dd285912-ed12-4549-9fcd-64ba29edddb7" name="Default Changelist" comment="" />
+      <created>1594031044806</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1594031044806</updated>
+      <workItem from="1594031057642" duration="752000" />
+      <workItem from="1594040756491" duration="5334000" />
+      <workItem from="1594639587535" duration="8465000" />
+      <workItem from="1597242182778" duration="9869000" />
+      <workItem from="1597339502201" duration="11994000" />
+      <workItem from="1597492550915" duration="22362000" />
+      <workItem from="1599825198436" duration="10175000" />
+      <workItem from="1599838857396" duration="9398000" />
+      <workItem from="1599905243341" duration="618000" />
+      <workItem from="1599909565801" duration="14299000" />
+      <workItem from="1599945003793" duration="5589000" />
+      <workItem from="1599993098920" duration="1644000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="322" key="GridCell.Tab.0.bottom" timestamp="1599953840896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="322" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1599953840896" />
+    <state width="1493" height="322" key="GridCell.Tab.0.center" timestamp="1599953840896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="322" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1599953840896" />
+    <state width="1493" height="322" key="GridCell.Tab.0.left" timestamp="1599953840896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="322" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1599953840896" />
+    <state width="1493" height="322" key="GridCell.Tab.0.right" timestamp="1599953840896">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="322" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1599953840896" />
+    <state width="1493" height="92" key="GridCell.Tab.1.bottom" timestamp="1597522175084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="92" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597522175084" />
+    <state width="1493" height="92" key="GridCell.Tab.1.center" timestamp="1597522175084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="92" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1597522175084" />
+    <state width="1493" height="92" key="GridCell.Tab.1.left" timestamp="1597522175084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="92" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1597522175084" />
+    <state width="1493" height="92" key="GridCell.Tab.1.right" timestamp="1597522175084">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="92" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1597522175084" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1599993101103">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1599993101103" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/cnn_project$sortImgs.coverage" NAME="sortImgs Coverage Results" MODIFIED="1597341616340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/cnn_project$main.coverage" NAME="main Coverage Results" MODIFIED="1599993178353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+  </component>
+</project>

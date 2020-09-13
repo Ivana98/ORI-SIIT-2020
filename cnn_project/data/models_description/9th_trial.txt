@@ -1,0 +1,126 @@
+9th TRIAL
+-----------------
+
+### CODE:
+
+EPOCHS = 20
+
+model = Sequential()
+model.add(Conv2D(64, kernel_size=(3, 3), input_shape=(IMG_W, IMG_H, 3)))
+model.add(Activation("relu"))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(64, kernel_size=(3, 3)))
+model.add(Activation("relu"))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(128, kernel_size=(3, 3)))
+model.add(Activation("relu"))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+model.add(Dense(128, activation="relu", kernel_regularizer=keras.regularizers.l2(0.001)))
+model.add(Dropout(0.5))
+model.add(Dense(64, kernel_regularizer=keras.regularizers.l2(0.001)))
+model.add(Dense(NUM_OF_CLASSES, activation="softmax"))
+
+
+### RESULT:
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 62, 62, 64)        1792      
+_________________________________________________________________
+activation (Activation)      (None, 62, 62, 64)        0         
+_________________________________________________________________
+batch_normalization (BatchNo (None, 62, 62, 64)        256       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 31, 31, 64)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 29, 29, 64)        36928     
+_________________________________________________________________
+activation_1 (Activation)    (None, 29, 29, 64)        0         
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 29, 29, 64)        256       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 14, 14, 64)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 12, 12, 128)       73856     
+_________________________________________________________________
+activation_2 (Activation)    (None, 12, 12, 128)       0         
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 12, 12, 128)       512       
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 6, 6, 128)         0         
+_________________________________________________________________
+flatten (Flatten)            (None, 4608)              0         
+_________________________________________________________________
+dense (Dense)                (None, 128)               589952    
+_________________________________________________________________
+dropout (Dropout)            (None, 128)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256      
+_________________________________________________________________
+dense_2 (Dense)              (None, 3)                 195       
+=================================================================
+Total params: 712,003
+Trainable params: 711,491
+Non-trainable params: 512
+_________________________________________________________________
+WARNING:tensorflow:From C:/Users/Ivana/PycharmProjects/cnn_project/src/main.py:96: Model.fit_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.fit, which supports generators.
+Epoch 1/20
+116/116 [==============================] - 91s 782ms/step - loss: 1.2226 - accuracy: 0.6488 - val_loss: 5.1461 - val_accuracy: 0.4792
+Epoch 2/20
+116/116 [==============================] - 92s 794ms/step - loss: 0.9854 - accuracy: 0.7100 - val_loss: 5.6031 - val_accuracy: 0.4792
+Epoch 3/20
+116/116 [==============================] - 94s 812ms/step - loss: 0.9529 - accuracy: 0.7327 - val_loss: 3.2194 - val_accuracy: 0.4792
+Epoch 4/20
+116/116 [==============================] - 96s 827ms/step - loss: 0.9157 - accuracy: 0.7432 - val_loss: 1.2345 - val_accuracy: 0.5863
+Epoch 5/20
+116/116 [==============================] - 96s 826ms/step - loss: 0.9067 - accuracy: 0.7549 - val_loss: 1.0629 - val_accuracy: 0.6209
+Epoch 6/20
+116/116 [==============================] - 97s 834ms/step - loss: 0.8827 - accuracy: 0.7530 - val_loss: 0.8968 - val_accuracy: 0.7210
+Epoch 7/20
+116/116 [==============================] - 96s 828ms/step - loss: 0.8544 - accuracy: 0.7692 - val_loss: 0.8647 - val_accuracy: 0.7469
+Epoch 8/20
+116/116 [==============================] - 97s 840ms/step - loss: 0.8613 - accuracy: 0.7698 - val_loss: 1.0184 - val_accuracy: 0.6788
+Epoch 9/20
+116/116 [==============================] - 97s 838ms/step - loss: 0.8456 - accuracy: 0.7646 - val_loss: 1.1099 - val_accuracy: 0.6209
+Epoch 10/20
+116/116 [==============================] - 97s 837ms/step - loss: 0.8369 - accuracy: 0.7665 - val_loss: 1.1945 - val_accuracy: 0.6215
+Epoch 11/20
+116/116 [==============================] - 96s 832ms/step - loss: 0.8103 - accuracy: 0.7727 - val_loss: 0.8913 - val_accuracy: 0.7343
+Epoch 12/20
+116/116 [==============================] - 97s 837ms/step - loss: 0.7934 - accuracy: 0.7800 - val_loss: 0.9823 - val_accuracy: 0.6700
+Epoch 13/20
+116/116 [==============================] - 97s 834ms/step - loss: 0.7775 - accuracy: 0.7852 - val_loss: 1.0132 - val_accuracy: 0.6675
+Epoch 14/20
+116/116 [==============================] - 97s 840ms/step - loss: 0.7672 - accuracy: 0.7835 - val_loss: 1.0126 - val_accuracy: 0.6461
+Epoch 15/20
+116/116 [==============================] - 96s 831ms/step - loss: 0.7465 - accuracy: 0.7933 - val_loss: 1.0265 - val_accuracy: 0.6675
+Epoch 16/20
+116/116 [==============================] - 98s 841ms/step - loss: 0.7489 - accuracy: 0.7927 - val_loss: 1.0947 - val_accuracy: 0.6354
+Epoch 17/20
+116/116 [==============================] - 98s 841ms/step - loss: 0.7383 - accuracy: 0.7914 - val_loss: 1.0735 - val_accuracy: 0.6304
+Epoch 18/20
+116/116 [==============================] - 97s 835ms/step - loss: 0.7289 - accuracy: 0.7973 - val_loss: 0.7954 - val_accuracy: 0.7500
+Epoch 19/20
+116/116 [==============================] - 97s 836ms/step - loss: 0.7198 - accuracy: 0.7873 - val_loss: 0.9954 - val_accuracy: 0.6694
+Epoch 20/20
+116/116 [==============================] - 98s 841ms/step - loss: 0.7016 - accuracy: 0.7992 - val_loss: 0.8503 - val_accuracy: 0.6732
+20/20 [==============================] - 8s 378ms/step - loss: 0.9152 - accuracy: 0.7292
+Tested:
+[0.9152125716209412, 0.7291666865348816]
+
+Start Time = 21:17:53
+End Time = 21:50:24
+Duration:  0:32:30.589403
+
+Process finished with exit code 0

@@ -1,0 +1,103 @@
+SEVENTH TRIAL 
+-----------------------------------------
+
+### CODE:
+
+EPOCHS = 10
+
+model = Sequential()
+model.add(Conv2D(64, kernel_size=(3, 3), input_shape=(IMG_W, IMG_H, 3)))
+model.add(Activation("relu"))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(64, kernel_size=(3, 3)))
+model.add(Activation("relu"))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(128, kernel_size=(3, 3)))
+model.add(Activation("relu"))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+model.add(Dense(128, activation="relu", kernel_regularizer=keras.regularizers.l2(0.001)))
+model.add(Dropout(0.5))
+model.add(Dense(64, kernel_regularizer=keras.regularizers.l2(0.001)))
+model.add(Dense(NUM_OF_CLASSES, activation="softmax"))
+
+### RESULT:
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 62, 62, 64)        1792      
+_________________________________________________________________
+activation (Activation)      (None, 62, 62, 64)        0         
+_________________________________________________________________
+batch_normalization (BatchNo (None, 62, 62, 64)        256       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 31, 31, 64)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 29, 29, 64)        36928     
+_________________________________________________________________
+activation_1 (Activation)    (None, 29, 29, 64)        0         
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 29, 29, 64)        256       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 14, 14, 64)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 12, 12, 128)       73856     
+_________________________________________________________________
+activation_2 (Activation)    (None, 12, 12, 128)       0         
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 12, 12, 128)       512       
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 6, 6, 128)         0         
+_________________________________________________________________
+flatten (Flatten)            (None, 4608)              0         
+_________________________________________________________________
+dense (Dense)                (None, 128)               589952    
+_________________________________________________________________
+dropout (Dropout)            (None, 128)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256      
+_________________________________________________________________
+dense_2 (Dense)              (None, 3)                 195       
+=================================================================
+Total params: 712,003
+Trainable params: 711,491
+Non-trainable params: 512
+
+Epoch 1/10
+116/116 [==============================] - 91s 781ms/step - loss: 1.3523 - accuracy: 0.6472 - val_loss: 4.0313 - val_accuracy: 0.2664
+Epoch 2/10
+116/116 [==============================] - 94s 810ms/step - loss: 1.0012 - accuracy: 0.7056 - val_loss: 3.3642 - val_accuracy: 0.2670
+Epoch 3/10
+116/116 [==============================] - 93s 806ms/step - loss: 0.9510 - accuracy: 0.7248 - val_loss: 2.6554 - val_accuracy: 0.4635
+Epoch 4/10
+116/116 [==============================] - 95s 817ms/step - loss: 0.9321 - accuracy: 0.7357 - val_loss: 1.3752 - val_accuracy: 0.5309
+Epoch 5/10
+116/116 [==============================] - 97s 835ms/step - loss: 0.8949 - accuracy: 0.7633 - val_loss: 1.3717 - val_accuracy: 0.5882
+Epoch 6/10
+116/116 [==============================] - 98s 845ms/step - loss: 0.8849 - accuracy: 0.7606 - val_loss: 0.8997 - val_accuracy: 0.7317
+Epoch 7/10
+116/116 [==============================] - 95s 823ms/step - loss: 0.8641 - accuracy: 0.7624 - val_loss: 0.9079 - val_accuracy: 0.7261
+Epoch 8/10
+116/116 [==============================] - 96s 828ms/step - loss: 0.8631 - accuracy: 0.7630 - val_loss: 1.2330 - val_accuracy: 0.5951
+Epoch 9/10
+116/116 [==============================] - 97s 838ms/step - loss: 0.8510 - accuracy: 0.7684 - val_loss: 1.0729 - val_accuracy: 0.6499
+Epoch 10/10
+116/116 [==============================] - 97s 837ms/step - loss: 0.8370 - accuracy: 0.7673 - val_loss: 0.9211 - val_accuracy: 0.7185
+20/20 [==============================] - 6s 288ms/step - loss: 0.7560 - accuracy: 0.8301
+Tested:
+[0.7560031414031982, 0.8301281929016113]
+
+Start Time = 19:54:01
+End Time = 20:10:11
+Duration:  0:16:09.760081
+
+
+## Model sa smanjenim brojem dropout-a

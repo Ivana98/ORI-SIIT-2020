@@ -1,0 +1,149 @@
+11th TRIAL
+--------------------------
+
+### CODE:
+
+EPOCHS = 30
+
+model = Sequential()
+model.add(Conv2D(64, kernel_size=(3, 3), input_shape=(IMG_W, IMG_H, 3)))
+model.add(Activation("relu"))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(64, kernel_size=(3, 3)))
+model.add(Activation("sigmoid"))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(128, kernel_size=(3, 3)))
+model.add(Activation("relu"))
+model.add(BatchNormalization())
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Conv2D(128, kernel_size=(3, 3)))
+model.add(Activation("sigmoid"))
+model.add(MaxPooling2D(pool_size=(2, 2)))
+
+model.add(Flatten())
+model.add(Dense(128, activation="relu", kernel_regularizer=keras.regularizers.l2(0.001)))
+model.add(Dropout(0.5))
+model.add(Dense(64, kernel_regularizer=keras.regularizers.l2(0.001)))
+model.add(Dense(NUM_OF_CLASSES, activation="softmax"))
+
+### RESULT:
+
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 62, 62, 64)        1792      
+_________________________________________________________________
+activation (Activation)      (None, 62, 62, 64)        0         
+_________________________________________________________________
+batch_normalization (BatchNo (None, 62, 62, 64)        256       
+_________________________________________________________________
+max_pooling2d (MaxPooling2D) (None, 31, 31, 64)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 29, 29, 64)        36928     
+_________________________________________________________________
+activation_1 (Activation)    (None, 29, 29, 64)        0         
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 14, 14, 64)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 12, 12, 128)       73856     
+_________________________________________________________________
+activation_2 (Activation)    (None, 12, 12, 128)       0         
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 12, 12, 128)       512       
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 6, 6, 128)         0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 4, 4, 128)         147584    
+_________________________________________________________________
+activation_3 (Activation)    (None, 4, 4, 128)         0         
+_________________________________________________________________
+max_pooling2d_3 (MaxPooling2 (None, 2, 2, 128)         0         
+_________________________________________________________________
+flatten (Flatten)            (None, 512)               0         
+_________________________________________________________________
+dense (Dense)                (None, 128)               65664     
+_________________________________________________________________
+dropout (Dropout)            (None, 128)               0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                8256      
+_________________________________________________________________
+dense_2 (Dense)              (None, 3)                 195       
+=================================================================
+Total params: 335,043
+Trainable params: 334,659
+Non-trainable params: 384
+_________________________________________________________________
+Epoch 1/30
+116/116 [==============================] - 97s 833ms/step - loss: 1.0413 - accuracy: 0.6301 - val_loss: 1.5675 - val_accuracy: 0.2544
+Epoch 2/30
+116/116 [==============================] - 94s 809ms/step - loss: 0.8867 - accuracy: 0.6891 - val_loss: 1.2699 - val_accuracy: 0.4792
+Epoch 3/30
+116/116 [==============================] - 95s 823ms/step - loss: 0.8313 - accuracy: 0.7146 - val_loss: 2.2371 - val_accuracy: 0.4792
+Epoch 4/30
+116/116 [==============================] - 94s 814ms/step - loss: 0.8188 - accuracy: 0.7202 - val_loss: 1.2468 - val_accuracy: 0.5038
+Epoch 5/30
+116/116 [==============================] - 94s 807ms/step - loss: 0.7722 - accuracy: 0.7403 - val_loss: 1.3502 - val_accuracy: 0.5025
+Epoch 6/30
+116/116 [==============================] - 96s 827ms/step - loss: 0.7553 - accuracy: 0.7508 - val_loss: 0.7614 - val_accuracy: 0.7173
+Epoch 7/30
+116/116 [==============================] - 96s 825ms/step - loss: 0.7255 - accuracy: 0.7600 - val_loss: 1.2376 - val_accuracy: 0.5712
+Epoch 8/30
+116/116 [==============================] - 95s 820ms/step - loss: 0.7127 - accuracy: 0.7649 - val_loss: 1.0431 - val_accuracy: 0.5756
+Epoch 9/30
+116/116 [==============================] - 95s 818ms/step - loss: 0.6889 - accuracy: 0.7692 - val_loss: 0.7664 - val_accuracy: 0.7217
+Epoch 10/30
+116/116 [==============================] - 95s 822ms/step - loss: 0.6750 - accuracy: 0.7722 - val_loss: 0.7893 - val_accuracy: 0.6914
+Epoch 11/30
+116/116 [==============================] - 95s 818ms/step - loss: 0.6624 - accuracy: 0.7860 - val_loss: 0.6918 - val_accuracy: 0.7576
+Epoch 12/30
+116/116 [==============================] - 95s 819ms/step - loss: 0.6441 - accuracy: 0.7825 - val_loss: 0.9854 - val_accuracy: 0.5623
+Epoch 13/30
+116/116 [==============================] - 96s 828ms/step - loss: 0.6336 - accuracy: 0.7944 - val_loss: 0.7556 - val_accuracy: 0.6675
+Epoch 14/30
+116/116 [==============================] - 96s 831ms/step - loss: 0.6242 - accuracy: 0.7892 - val_loss: 0.8533 - val_accuracy: 0.7147
+Epoch 15/30
+116/116 [==============================] - 96s 832ms/step - loss: 0.6106 - accuracy: 0.7946 - val_loss: 0.8046 - val_accuracy: 0.6839
+Epoch 16/30
+116/116 [==============================] - 96s 831ms/step - loss: 0.5993 - accuracy: 0.8033 - val_loss: 0.9361 - val_accuracy: 0.6707
+Epoch 17/30
+116/116 [==============================] - 95s 823ms/step - loss: 0.5973 - accuracy: 0.8060 - val_loss: 0.7474 - val_accuracy: 0.6782
+Epoch 18/30
+116/116 [==============================] - 96s 827ms/step - loss: 0.5766 - accuracy: 0.8044 - val_loss: 0.6741 - val_accuracy: 0.7475
+Epoch 19/30
+116/116 [==============================] - 95s 820ms/step - loss: 0.5846 - accuracy: 0.8036 - val_loss: 0.8940 - val_accuracy: 0.6801
+Epoch 20/30
+116/116 [==============================] - 97s 833ms/step - loss: 0.5784 - accuracy: 0.8049 - val_loss: 0.6967 - val_accuracy: 0.7097
+Epoch 21/30
+116/116 [==============================] - 96s 827ms/step - loss: 0.5812 - accuracy: 0.8074 - val_loss: 0.7235 - val_accuracy: 0.7273
+Epoch 22/30
+116/116 [==============================] - 98s 842ms/step - loss: 0.5648 - accuracy: 0.8047 - val_loss: 0.7266 - val_accuracy: 0.7198
+Epoch 23/30
+116/116 [==============================] - 95s 822ms/step - loss: 0.5525 - accuracy: 0.8079 - val_loss: 0.8422 - val_accuracy: 0.6883
+Epoch 24/30
+116/116 [==============================] - 97s 833ms/step - loss: 0.5714 - accuracy: 0.8065 - val_loss: 0.7947 - val_accuracy: 0.7292
+Epoch 25/30
+116/116 [==============================] - 102s 877ms/step - loss: 0.5451 - accuracy: 0.8136 - val_loss: 0.8798 - val_accuracy: 0.6820
+Epoch 26/30
+116/116 [==============================] - 99s 850ms/step - loss: 0.5475 - accuracy: 0.8101 - val_loss: 0.9485 - val_accuracy: 0.6474
+Epoch 27/30
+116/116 [==============================] - 106s 918ms/step - loss: 0.5342 - accuracy: 0.8195 - val_loss: 0.9254 - val_accuracy: 0.6014
+Epoch 28/30
+116/116 [==============================] - 97s 839ms/step - loss: 0.5325 - accuracy: 0.8187 - val_loss: 0.7624 - val_accuracy: 0.6902
+Epoch 29/30
+116/116 [==============================] - 97s 834ms/step - loss: 0.5223 - accuracy: 0.8214 - val_loss: 0.7112 - val_accuracy: 0.7059
+Epoch 30/30
+116/116 [==============================] - 97s 832ms/step - loss: 0.5241 - accuracy: 0.8141 - val_loss: 0.8244 - val_accuracy: 0.6555
+20/20 [==============================] - 8s 396ms/step - loss: 0.5482 - accuracy: 0.8397
+Tested:
+[0.5482134819030762, 0.8397436141967773]
+
+Start Time = 12:33:06
+End Time = 13:21:51
+Duration:  0:48:45.712651
+
+Process finished with exit code 0
