@@ -246,5 +246,5 @@ pip-selfcheck.json
 
 # End of https://www.toptal.com/developers/gitignore/api/python,pycharm,venv
 
-!cnn_project/data/*_set/.gitkeep
 cnn_project/data/*_set/
+!cnn_project/data/*_set/.gitkeep
